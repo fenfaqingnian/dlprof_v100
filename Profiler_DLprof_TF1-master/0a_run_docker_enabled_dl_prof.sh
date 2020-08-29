@@ -1,0 +1,1 @@
+sudo docker run --runtime=nvidia --cap-add=SYS_ADMIN  -it --rm --gpus '"device=1"' --shm-size=1g --ulimit memlock=-1 --ulimit stack=67108864  -p $1:$1  -p 6006:6006  -p 6007:6007  -p 6008:6008  -p 6009:6009  -v $(pwd):/workspace nvcr.io/nvidia/tensorflow:20.07-tf1-py3
